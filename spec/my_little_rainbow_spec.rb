@@ -22,7 +22,7 @@ RSpec.describe 'Navigation and Nested Elements' do
       it 'contains a <link> tag to our main.css file' do
         link = parsed_html.search('html > head > link').first
 
-        expect(link.name).to eq('link'), "We need a <link> in our <head> section to connect our css"
+        
 
       end
     end
