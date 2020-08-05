@@ -37,18 +37,18 @@ RSpec.describe 'Navigation and Nested Elements' do
       expect(html_file_contents).to include('</body>'), "Don't forget the closing </body> tag!"
     end
 
-    # context 'within <body>' do
-    #   it 'contains a <div> tag with an id of "red" ' do
-    #     red_div = parsed_html.search('#red').first
-    #     expect(red_div).to_not be_nil, "Add the id 'red' to the first, outer div"
-    #     expect(red_div.name).to eq('div'), "Add the id 'red' to the first, outer div"
-    #   end
+    context 'within <body>' do
+      it 'contains a <div> tag with an id of "red" ' do
+        red_div = parsed_html.search('#red').first
+        expect(red_div).to_not be_nil, "Add the id 'red' to the first, outer div"
+        expect(red_div.name).to eq('div'), "Add the id 'red' to the first, outer div"
+      end
 
-      # it 'contains a <div> tag with an id of "orange" ' do
-      #   orange_div = parsed_html.search('#orange').first
-      #   expect(orange_div).to_not be_nil, "Add the id 'orange' to the second div"
-      #   expect(orange_div.name).to eq('div'), "Add the id 'orange' to the second div"
-      # end
+      it 'contains a <div> tag with an id of "orange" ' do
+        orange_div = parsed_html.search('#orange').first
+        expect(orange_div).to_not be_nil, "Add the id 'orange' to the second div"
+        expect(orange_div.name).to eq('div'), "Add the id 'orange' to the second div"
+      end
 
       it 'contains a <div> tag with an id of "yellow" ' do
         yellow_div = parsed_html.search('#yellow').first
